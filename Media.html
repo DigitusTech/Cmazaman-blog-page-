@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMA ZAMAN | Tech, Lifestyle & Motivation</title>
+    <meta name="description" content="Premium blog for Technology, Lifestyle, and Motivation by CMA Zaman.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        :root { --primary: #3b82f6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s, color 0.3s; }
+        .dark { background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .dark .glass { background: rgba(15, 23, 42, 0.8); border-color: #1e293b; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
 
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">CMA <span class="text-blue-600">ZAMAN</span></div>
+            <div class="hidden md:flex space-x-8 font-medium">
+              <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="index.html#blog" class="hover:text-blue-600 transition">Blog</a>
+                <a href=".html" class="hover:text-blue-600 transition">Media</a>
+                <a href="#profile" class="hover:text-blue-600 transition">Author</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="darkToggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800"><i class="fas fa-moon"></i></button>
+                <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+<section id="media-hub" class="pt-32 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">CMA Media Gallery</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto">A curated collection of tech reviews, lifestyle captures, and motivational sessions.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white font-semibold" data-type="all">All Media</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold" data-type="photo">Photography</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold" data-type="video">Video</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold" data-type="audio">Podcasts</button>
+        </div>
+
+        <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="media-item video relative group overflow-hidden rounded-3xl bg-slate-200 aspect-video cursor-pointer" onclick="openLightbox('video', 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center text-white">
+                    <i class="fas fa-play-circle text-5xl mb-2"></i>
+                    <span class="font-bold uppercase tracking-widest text-sm">Play Tech Review</span>
+                </div>
+            </div>
+           
+
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+  <iframe 
+    src="https://www.youtube.com/embed/M4JktCfaeJU"
+    style="position:absolute; top:0; left:0; width:100%; height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+   <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+  <iframe 
+    src="https://www.youtube.com/embed/VYeufIxENFU"
+    style="position:absolute; top:0; left:0; width:100%; height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+
+            <div class="media-item audio p-8 bg-gradient-to-br from-slate-900 to-blue-900 rounded-3xl flex flex-col justify-between aspect-square group">
+                <div>
+                    <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-microphone-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold">Motivation Podcast EP 12</h3>
+                    <p class="text-blue-200/60 mt-2">Topic: Overcoming Digital Burnout</p>
+                </div>
+                <button class="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl border border-white/10 transition backdrop-blur-sm">
+                    Listen Now
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-4xl hover:text-blue-500 transition">&times;</button>
+    <div id="lightboxContent" class="max-w-5xl w-full h-auto max-h-[80vh] flex items-center justify-center">
+        </div>
+</div>
+
+ <footer class="py-12 border-t border-slate-100 dark:border-slate-800 text-center">
+        <p class="text-slate-400">© 2026 CMA ZAMAN. All rights reserved.</p>
+    </footer>I'm"
+
+<script>
+    // 1. Filtering Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const mediaItems = document.querySelectorAll('.media-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // UI Update
+            filterBtns.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
+            btn.classList.add('bg-blue-600', 'text-white');
+
+            const type = btn.dataset.type;
+            mediaItems.forEach(item => {
+                if (type === 'all' || item.classList.contains(type)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // 2. Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const content = document.getElementById('lightboxContent');
+
+    function openLightbox(type, src) {
+        content.innerHTML = '';
+        if (type === 'video') {
+            content.innerHTML = `<iframe src="${src}" class="w-full aspect-video rounded-xl shadow-2xl" frameborder="0" allowfullscreen></iframe>`;
+        } else if (type === 'image') {
+            content.innerHTML = `<img src="${src}" class="max-w-full max-h-[80vh] rounded-xl shadow-2xl object-contain">`;
+        }
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Stop scrolling
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add('hidden');
+        content.innerHTML = '';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+    
+</script>
