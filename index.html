@@ -1,232 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMA ZAMAN | Tech, Lifestyle & Motivation</title>
-    <meta name="description" content="Premium blog for Technology, Lifestyle, and Motivation by CMA Zaman.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        :root { --primary: #3b82f6; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s, color 0.3s; }
-        .dark { background-color: #0f172a; color: #f8fafc; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
-        .dark .glass { background: rgba(15, 23, 42, 0.8); border-color: #1e293b; }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CMA Blog | Tech, Lifestyle & Deep Thoughts</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f5f5;
+color:#333;
+line-height:1.6;
+}
+
+/* NAVIGATION */
+
+header{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:22px;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:white;
+}
+
+.hero img{
+width:140px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:32px;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+font-size:18px;
+}
+
+/* SECTION */
+
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+/* FEATURED STORY */
+
+.featured{
+background:white;
+border-radius:10px;
+padding:30px;
+box-shadow:0 0 10px rgba(0,0,0,0.05);
+}
+
+.featured img{
+width:100%;
+border-radius:8px;
+}
+
+/* BLOG POSTS */
+
+.posts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.post-card{
+background:white;
+border-radius:10px;
+padding:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.05);
+}
+
+.post-card img{
+width:100%;
+border-radius:6px;
+}
+
+/* CATEGORIES */
+
+.categories{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.cat{
+background:#111;
+color:white;
+padding:10px 18px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* MEDIA */
+
+.media iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+}
+
+/* QUOTE */
+
+.quote{
+background:#111;
+color:white;
+text-align:center;
+padding:60px 20px;
+font-size:22px;
+font-style:italic;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+align-items:center;
+}
+
+.about img{
+width:200px;
+border-radius:10px;
+}
+
+/* SUBSCRIBE */
+
+.subscribe{
+background:white;
+text-align:center;
+padding:50px 20px;
+border-radius:10px;
+}
+
+.subscribe input{
+padding:12px;
+width:250px;
+margin-right:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.subscribe button{
+padding:12px 20px;
+background:#111;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
 </head>
-<body class="bg-slate-50 text-slate-900">
 
-    <nav class="fixed w-full z-50 glass border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter">CMA <span class="text-blue-600">ZAMAN</span></div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#home" class="hover:text-blue-600 transition">Home</a>
-                <a href="#blog" class="hover:text-blue-600 transition">Blog</a>
-                <a href="#media" class="hover:text-blue-600 transition">Media</a>
-                <a href="#profile" class="hover:text-blue-600 transition">Author</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button id="darkToggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800"><i class="fas fa-moon"></i></button>
-                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <header id="home" class="pt-32 pb-20 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Tech, Lifestyle & <span class="text-blue-600">Motivation.</span></h1>
-            <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">Decoding the digital age and empowering your personal journey through expert insights.</p>
-            <div class="relative max-w-lg mx-auto mb-10">
-                <input type="text" id="blogSearch" placeholder="Search posts..." class="w-full px-6 py-4 rounded-full border border-slate-200 dark:bg-slate-800 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500">
-                <i class="fas fa-search absolute right-6 top-5 text-slate-400"></i>
-            </div>
-        </div>
-    </header>
+<!-- HEADER -->
 
-    <section id="profile" class="py-16 px-6 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center gap-10 p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50">
-                <div class="relative group">
-                    <img id="authorImg" src="https://ui-avatars.com/api/?name=CMA+Zaman&background=0D8ABC&color=fff&size=150" alt="Author" class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-xl">
-                    <label for="imgUpload" class="absolute bottom-2 right-2 bg-blue-600 text-white p-2 rounded-full cursor-pointer hover:scale-110 transition"><i class="fas fa-camera text-xs"></i></label>
-                    <input type="file" id="imgUpload" class="hidden" accept="image/*">
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <h2 id="authorName" class="text-3xl font-bold" contenteditable="true">CMA Zaman</h2>
-                        <div class="flex justify-center space-x-3 text-slate-400">
-                            <span class="text-sm"><i class="fas fa-pen-nib mr-1 text-blue-500"></i> 24 Posts</span>
-                            <span class="text-sm"><i class="fas fa-users mr-1 text-purple-500"></i> 12k Followers</span>
-                        </div>
-                    </div>
-                    <p id="authorBio" class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed" contenteditable="true">
-                        Tech enthusiast and motivational speaker. I explore the intersection of productivity and technology to help you lead a balanced lifestyle.
-                    </p>
-                    <div id="authorSocials" class="mt-6 flex justify-center md:justify-start space-x-4">
-                        <a href="#" class="text-blue-500 hover:scale-125 transition"><i class="fab fa-linkedin-in text-xl"></i></a>
-                        <a href="#" class="text-sky-400 hover:scale-125 transition"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-pink-500 hover:scale-125 transition"><i class="fab fa-instagram text-xl"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
 
-    <section id="blog" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-4xl font-bold mb-2">Latest Insights</h2>
-                    <p class="text-slate-500">Fresh content from the world of Tech & Motivation</p>
-                </div>
-                <div class="flex space-x-2">
-                    <button class="cat-filter px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold" data-filter="all">All</button>
-                    <button class="cat-filter px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-sm font-semibold border border-slate-200 dark:border-slate-700" data-filter="tech">Tech</button>
-                    <button class="cat-filter px-4 py-2 rounded-full bg-white dark:bg-slate-800 text-sm font-semibold border border-slate-200 dark:border-slate-700" data-filter="life">Lifestyle</button>
-                </div>
-            </div>
+<h1>CMA Blog</h1>
 
-            <div id="postsContainer" class="grid md:grid-cols-3 gap-8">
-                <article class="post-card tech card-hover bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Tech post" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-blue-600 uppercase">Technology</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">AI in 2026: What's Next?</h3>
-                        <div class="flex items-center text-slate-400 text-xs mb-4">
-                            <span>March 4, 2026</span> • <span>5 min read</span>
-                        </div>
-                        <div class="flex justify-between items-center border-t pt-4 border-slate-100 dark:border-slate-700">
-                            <button class="like-btn text-slate-400 hover:text-red-500 transition"><i class="far fa-heart mr-1"></i> 124</button>
-                            <a href="#" class="text-blue-600 font-semibold text-sm">Read More <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </article>
+<nav>
+<a href="#">Home</a>
+<a href="#">Blog</a>
+<a href="#">Media</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
 
-                <article class="post-card life card-hover bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
-                    <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80" alt="Lifestyle post" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-green-600 uppercase">Motivation</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">5 Habits for Peak Performance</h3>
-                        <div class="flex items-center text-slate-400 text-xs mb-4">
-                            <span>Feb 28, 2026</span> • <span>8 min read</span>
-                        </div>
-                        <div class="flex justify-between items-center border-t pt-4 border-slate-100 dark:border-slate-700">
-                            <button class="like-btn text-slate-400 hover:text-red-500 transition"><i class="far fa-heart mr-1"></i> 89</button>
-                            <a href="#" class="text-blue-600 font-semibold text-sm">Read More <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+</header>
 
-    <section id="media" class="py-20 bg-slate-100 dark:bg-slate-900/50 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center">Media Hub</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="relative group cursor-pointer overflow-hidden rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fas fa-play-circle text-4xl"></i></div>
-                </div>
-                <div class="col-span-2 relative group cursor-pointer overflow-hidden rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white"><i class="fas fa-image text-4xl"></i></div>
-                </div>
-                <div class="relative group cursor-pointer overflow-hidden rounded-xl h-64">
-                    <div class="w-full h-full bg-blue-600 flex flex-col items-center justify-center text-white p-4">
-                        <i class="fas fa-microphone text-3xl mb-2"></i>
-                        <span class="font-bold">Latest Podcast</span>
-                        <p class="text-xs opacity-80 mt-1">EP 42: Future of Web</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO SECTION -->
 
-    <section id="contact" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Stay Connected</h2>
-                <p class="text-slate-500 mb-8 text-lg">Have a project in mind or just want to chat? Drop a message and let's build something amazing together.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><i class="fas fa-envelope"></i></div>
-                        <div><p class="text-sm font-bold">Email</p><p class="text-slate-500">hello@cmazaman.com</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700">
-                <form id="contactForm" class="space-y-4">
-                    <input type="text" id="name" placeholder="Name" class="w-full px-5 py-3 rounded-xl border dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500" required>
-                    <input type="email" id="email" placeholder="Email" class="w-full px-5 py-3 rounded-xl border dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500" required>
-                    <textarea rows="4" placeholder="Your Message" class="w-full px-5 py-3 rounded-xl border dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-                    <button class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition transform active:scale-95">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <footer class="py-12 border-t border-slate-100 dark:border-slate-800 text-center">
-        <p class="text-slate-400">© 2026 CMA ZAMAN. All rights reserved.</p>
-    </footer>
+<img src="profile.jpg" alt="CMA">
 
-    <script>
-        // Dark Mode Toggle
-        const darkToggle = document.getElementById('darkToggle');
-        darkToggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            darkToggle.innerHTML = document.documentElement.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        });
+<h2>Welcome to CMA's World</h2>
 
-        // Live Search
-        const searchInput = document.getElementById('blogSearch');
-        searchInput.addEventListener('keyup', (e) => {
-            const term = e.target.value.toLowerCase();
-            const posts = document.querySelectorAll('.post-card');
-            posts.forEach(post => {
-                const title = post.querySelector('h3').innerText.toLowerCase();
-                post.style.display = title.includes(term) ? 'block' : 'none';
-            });
-        });
+<p>
+Music fuels the soul 🎶, travel sparks the spirit ✈️, deep thoughts shape the mind 🤔,
+tech ignites curiosity 💻, and stories bring ideas to life 🎬.
+</p>
 
-        // Category Filtering
-        const filterBtns = document.querySelectorAll('.cat-filter');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filter = btn.dataset.filter;
-                
-                // UI update
-                filterBtns.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
-                btn.classList.add('bg-blue-600', 'text-white');
+</section>
 
-                const posts = document.querySelectorAll('.post-card');
-                posts.forEach(post => {
-                    if(filter === 'all' || post.classList.contains(filter)) {
-                        post.style.display = 'block';
-                    } else {
-                        post.style.display = 'none';
-                    }
-                });
-            });
-        });
+<!-- FEATURED STORY -->
 
-        // Profile Image Preview (Local Change)
-        document.getElementById('imgUpload').addEventListener('change', function() {
-            if (this.files && this.files[0]) {
-                const reader = new FileReader();
-                reader.onload = (e) => document.getElementById('authorImg').src = e.target.result;
-                reader.readAsDataURL(this.files[0]);
-            }
-        });
+<section>
 
-        // Form Validation & Feedback
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('CMA ZAMAN: Message received! We will contact you soon.');
-        });
-    </script>
+<h2>Featured Story</h2>
+
+<div class="featured">
+
+<img src="featured.jpg">
+
+<h3>A Boy Sitting in Silence</h3>
+
+<p>
+A reflection on the quiet moments that shape who we become.
+Sometimes the loudest lessons in life arrive in silence.
+</p>
+
+</div>
+
+</section>
+
+<!-- BLOG POSTS -->
+
+<section>
+
+<h2>Latest Thoughts</h2>
+
+<div class="posts">
+
+<div class="post-card">
+
+<img src="post1.jpg">
+
+<h3>The Future of AI</h3>
+
+<p>How artificial intelligence is shaping the future of creativity and business.</p>
+
+</div>
+
+<div class="post-card">
+
+<img src="post2.jpg">
+
+<h3>Moments That Shape Us</h3>
+
+<p>Life sometimes teaches its biggest lessons in the smallest moments.</p>
+
+</div>
+
+<div class="post-card">
+
+<img src="post3.jpg">
+
+<h3>Why Deep Thinking Matters</h3>
+
+<p>Reflection allows us to understand life beyond the surface.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section>
+
+<h2>Explore Topics</h2>
+
+<div class="categories">
+
+<div class="cat">Tech</div>
+<div class="cat">Lifestyle</div>
+<div class="cat">Motivation</div>
+<div class="cat">Deep Thoughts</div>
+<div class="cat">Scripts</div>
+<div class="cat">Travel</div>
+
+</div>
+
+</section>
+
+<!-- MEDIA -->
+
+<section class="media">
+
+<h2>Video Reflections</h2>
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+"Sometimes the quietest moments shape the loudest decisions in our lives."
+
+</section>
+
+<!-- ABOUT -->
+
+<section>
+
+<h2>About CMA</h2>
+
+<div class="about">
+
+<img src="profile.jpg">
+
+<p>
+
+CMA is a thinker, storyteller, and tech enthusiast who explores life through
+ideas, creativity, and reflection. This blog is a space for sharing thoughts
+about technology, personal growth, life experiences, and stories that inspire
+people to see the world differently.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SUBSCRIBE -->
+
+<section>
+
+<div class="subscribe">
+
+<h2>Stay Connected</h2>
+
+<p>Get updates whenever a new story or insight is published.</p>
+
+<input type="email" placeholder="Enter your email">
+
+<button>Subscribe</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 CMA Blog | Thoughts, Stories & Exploration</p>
+
+</footer>
+
 </body>
-</html>
+    </html>
