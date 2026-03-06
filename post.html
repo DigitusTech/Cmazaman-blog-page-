@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMA ZAMAN | Tech, Lifestyle & Motivation</title>
+    <meta name="description" content="Premium blog for Technology, Lifestyle, and Motivation by CMA Zaman.">
+    <!-- FIX 1: Tailwind dark mode config -->
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        :root { --primary: #3b82f6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s, color 0.3s; }
+        .dark { background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .dark .glass { background: rgba(15, 23, 42, 0.8); border-color: #1e293b; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">CMA <span class="text-blue-600">ZAMAN</span></div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="index.html#blog" class="hover:text-blue-600 transition">Blog</a>
+                <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+                <a href="index.html#profile" class="hover:text-blue-600 transition">Author</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="darkToggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800"><i class="fas fa-moon"></i></button>
+                <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+        <header class="mb-10 text-center">
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-bold uppercase">Motivation</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-4">How to Maintain Peak Performance in a Tech-Driven World</h1>
+            <div class="flex items-center justify-center space-x-4 text-slate-500 text-sm">
+                <img src="https://ui-avatars.com/api/?name=CMA+Zaman" class="w-8 h-8 rounded-full">
+                <span>By <strong>CMA Zaman</strong></span>
+                <span>•</span>
+                <span>March 4, 2026</span>
+            </div>
+        </header>
+
+        <!-- FIX 2: Removed duplicate nested iframe wrappers — now one clean embed per video -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl mb-6" style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe
+                src="https://www.youtube.com/embed/M4JktCfaeJU"
+                style="position:absolute; top:0; left:0; width:100%; height:100%;"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-2xl mb-12" style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe
+                src="https://www.youtube.com/embed/VYeufIxENFU"
+                style="position:absolute; top:0; left:0; width:100%; height:100%;"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <article class="prose prose-lg dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p class="mb-6 text-xl font-light italic border-l-4 border-blue-600 pl-6">"Technology should be a tool for our evolution, not a cage for our attention."</p>
+            
+            <p class="mb-4">In today's fast-paced environment, the overlap between our digital tools and our lifestyle habits is inseparable. To truly scale your output, you must audit your digital consumption...</p>
+
+            <div class="my-10 p-6 bg-slate-900 rounded-2xl text-white flex items-center gap-6">
+                <button id="playAudio" class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="flex-1">
+                    <p class="text-sm font-bold">Listen to this article (Podcast Version)</p>
+                    <div class="w-full bg-slate-700 h-1 mt-2 rounded-full overflow-hidden">
+                        <div class="bg-blue-500 h-full w-1/3"></div>
+                    </div>
+                </div>
+                <span class="text-xs opacity-60">12:45</span>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">The 3 Pillars of CMA Performance</h2>
+            <ul class="list-disc pl-6 space-y-2 mb-10">
+                <li><strong>Digital Fasting:</strong> Turn off notifications for 2 hours daily.</li>
+                <li><strong>Tech Stacking:</strong> Using AI to automate 40% of repetitive tasks.</li>
+                <li><strong>Mental Clarity:</strong> Morning motivation rituals before the first screen.</li>
+            </ul>
+        </article>
+
+        <div class="mt-16 py-6 border-y border-slate-100 dark:border-slate-800 flex flex-wrap justify-between items-center gap-6">
+            <div class="flex items-center space-x-6">
+                <button class="flex items-center gap-2 group">
+                    <i class="far fa-heart text-2xl group-hover:text-red-500 transition"></i>
+                    <span class="font-bold">1.2k</span>
+                </button>
+                <button class="flex items-center gap-2 group">
+                    <i class="far fa-comment text-2xl group-hover:text-blue-500 transition"></i>
+                    <span class="font-bold">48</span>
+                </button>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-sm font-bold uppercase tracking-widest opacity-50">Share:</span>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-black hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="mt-20">
+            <h3 class="text-2xl font-bold mb-8">Discussion (48)</h3>
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-slate-200 rounded-full flex-shrink-0"></div>
+                    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex-1 border border-slate-100 dark:border-slate-700">
+                        <p class="text-sm font-bold mb-1">Sarah Jenkins</p>
+                        <p class="text-slate-600 dark:text-slate-400">This insight on digital fasting literally saved my work week. Thanks CMA!</p>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <textarea placeholder="Join the motivation..." class="w-full p-6 rounded-2xl border border-slate-200 dark:bg-slate-900 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-600 transition"></textarea>
+                    <button class="mt-4 bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-blue-200">Post Comment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIX 3: Footer moved outside section, closing tags added -->
+    <footer class="py-12 border-t border-slate-100 dark:border-slate-800 text-center">
+        <p class="text-slate-400">© 2026 CMA ZAMAN. All rights reserved.</p>
+    </footer>
+
+    <!-- FIX 4: Added missing darkToggle script -->
+    <script>
+        const darkToggle = document.getElementById('darkToggle');
+        darkToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            darkToggle.innerHTML = document.documentElement.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+    </script>
+</body>
+</html>
