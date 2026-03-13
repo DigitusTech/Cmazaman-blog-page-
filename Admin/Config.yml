@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-USERNAME/YOUR-REPOSITORY
+  repo: DigitusTech/cmazaman-blog-page
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
