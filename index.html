@@ -28,6 +28,26 @@
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
         .dark .glass { background: rgba(15, 23, 42, 0.8); border-color: #1e293b; }
         .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+         .dark-mode-notice {
+    width: 100%;
+    background: #fff3cd;
+    color: #856404;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #ffeeba;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.dark-mode-notice p {
+    margin: 0;
+}
+@media (prefers-color-scheme: light) {
+    .dark-mode-notice {
+        display: none;
+    }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -56,6 +76,11 @@
                 <input type="text" id="blogSearch" placeholder="Search posts..." class="w-full px-6 py-4 rounded-full border border-slate-200 dark:bg-slate-800 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500">
                 <i class="fas fa-search absolute right-6 top-5 text-slate-400"></i>
             </div>
+            <div class="dark-mode-notice">
+    <p>
+        ⚠️ For the best viewing experience, please turn off dark mode on your device.
+    </p>
+</div>
         </div>
     </header>
 
